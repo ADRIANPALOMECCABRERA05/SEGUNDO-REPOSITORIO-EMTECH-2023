@@ -1,0 +1,27 @@
+@use "variables";
+@use "mixins";
+
+.gallery{
+    &__image-container{
+        border: 1px solid blue;
+        height: 300px;
+        width: 100%;
+        background-image: url(../images/image-product-1.jpg);
+        background-position-y: -35px;
+        background-size: cover;
+    }
+    &__previus{
+        @include mixins.image-btn(170px, 15px);
+    }
+
+    &__next{
+        @include mixins.image-btn(170px, 320px);
+    }
+
+    &__thumnail{
+        display: none;
+        @media (min-width: 1115px){
+            display: block;
+        }
+    }
+}
