@@ -3,13 +3,14 @@
 
 
 .input{
-    border: 1px solid red;
+    //border: 1px solid red;
     height: 57px;
     display: flex;
     justify-content: space-between;
+    background-color: variables.$Light-grayish-blue;
     &__minus{
         width: 25px;
-        border: 1px solid;
+        //border: 1px solid;
         height: 100%;
         padding: 24px 5px;
         &:hover{
@@ -28,7 +29,7 @@
     }
     &__plus{
         width: 25px;
-        border: 1px solid;
+        //border: 1px solid;
         height: 100%;
         padding: 19px 3px;
         &:hover{

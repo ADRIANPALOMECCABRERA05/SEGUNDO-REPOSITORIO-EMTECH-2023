@@ -2,8 +2,9 @@
 @use "mixins";
 
 .gallery{
+    //border: 1px solid red;
     &__image-container{
-        border: 1px solid blue;
+        //border: 1px solid blue;
         height: 300px;
         width: 100%;
         background-image: url(../images/image-product-1.jpg);
@@ -11,17 +12,37 @@
         background-size: cover;
     }
     &__previus{
-        @include mixins.image-btn(170px, 15px);
+        @include mixins.image-btn(170px, 15px, false);
     }
 
     &__next{
-        @include mixins.image-btn(170px, 320px);
+        @include mixins.image-btn(170px, 320px, false);
     }
 
-    &__thumnail{
+    &__thumnails{
+        //border: 1px solid blue;
         display: none;
         @media (min-width: 1115px){
-            display: block;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &__thumnail{
+        width: 90px;
+        border-radius: 16px;
+        &:hover{
+            cursor: pointer;
+            border: 2px solid variables.$Orange;
+        }
+    }
+    @media (min-width: 1115px){
+        width: 446px;
+        &__image-container{
+            background-position-y: 0;
+            border-radius: 16px;
+            width: 446px;
+            height: 446px;
+            margin-bottom: 32px
         }
     }
 }
